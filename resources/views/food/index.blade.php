@@ -14,7 +14,7 @@
           <p class="card-text">{{ $food->description }}</p>
         </div>
         <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <small class="text-muted">{{ Carbon\Carbon::parse($food->created_at)->diffForHumans() }}</small>
         </div>
       </div>
     @endforeach
