@@ -12,7 +12,9 @@ Route::get('food/{id}', 'FoodController@show')->name('food.show');
 
 //auth
 Auth::routes();
-Route::get('/profile', 'HomeController@index')->name('profile');
+Route::get('/profile', 'UserController@index')->name('profile');
+Route::get('/profile/edit', 'UserController@edit')->name('user.edit');
+Route::post('/profile/update', 'UserController@update')->name('user.update');
 
 //comment
 Route::post('/comment/store', 'CommentController@store')->name('comment.add');
