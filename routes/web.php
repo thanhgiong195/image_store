@@ -12,7 +12,7 @@ Route::get('food/{id}', 'FoodController@show')->name('food.show');
 
 //auth
 Auth::routes();
-Route::get('profile', 'HomeController@index');
+Route::get('/profile', 'HomeController@index')->name('profile');
 
 //comment
 Route::post('/comment/store', 'CommentController@store')->name('comment.add');
