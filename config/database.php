@@ -1,7 +1,7 @@
 <?php
-
+   $DATABASE_URL = 'postgres://gmkyvtfjdizawn:ea8412b7e16839cca156f5b7c66e2df54ef72eb93d0b6469844d2d81541bae42@ec2-54-225-113-7.compute-1.amazonaws.com:5432/d1rj88orpbgf7f';
 return [
-    $DATABASE_URL = 'postgres://gmkyvtfjdizawn:ea8412b7e16839cca156f5b7c66e2df54ef72eb93d0b6469844d2d81541bae42@ec2-54-225-113-7.compute-1.amazonaws.com:5432/d1rj88orpbgf7f';
+ 
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
