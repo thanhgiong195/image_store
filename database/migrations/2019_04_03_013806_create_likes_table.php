@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFoodsTable extends Migration
+class CreateLikesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateFoodsTable extends Migration
      */
     public function up()
     {
-        Schema::create('foods', function (Blueprint $table) {
+        Schema::create('likes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('user_id');
-            $table->string('description');
-            $table->string('image_url');
+            $table->integer('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('food_id')->references('id')->on('foods')->onDelete('cascade');
+            $table->boolean('like')->default(false);
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateFoodsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('foods');
+        Schema::dropIfExists('likes');
     }
 }

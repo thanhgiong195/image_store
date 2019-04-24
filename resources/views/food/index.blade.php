@@ -6,11 +6,11 @@
   <div class="card-columns" style="margin-top: 40px">
     @foreach ($foods as $food)
       <div class="card">
-          <a href="{{ url('food/') }}/{{  $food->id }}">
+          <a href="{{ route('food.show', $food->id) }}">
             <img class="card-img-top" src="{{ $food->image_url }}" alt="Card image cap">
           </a>
         <div class="card-body">
-          <a href="{{ url('food/') }}/{{  $food->id }}"><h5 class="card-title">{{ $food->name }}</h5></a>
+          <a href="{{ route('food.show', $food->id) }}"><h5 class="card-title">{{ $food->name }}</h5></a>
           <p class="card-text">{{ $food->description }}</p>
         </div>
         <div class="card-footer">

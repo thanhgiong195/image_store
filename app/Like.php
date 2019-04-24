@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model
+class Like extends Model
 {
     // fields can be filled
-    protected $fillable = ['body', 'user_id', 'food_id'];
+    protected $fillable = ['like', 'user_id', 'food_id'];
     
     public function food()
     {
