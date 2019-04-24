@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CommentRequest extends FormRequest
+class FoodRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,9 @@ class CommentRequest extends FormRequest
     public function rules()
     {
         return [
-            body' => 'required|max:1000',
+            'food_name' => 'bail|required|min:6|max:20',
+            'food_description' => 'bail|required|max:255',
+            'food_image' => 'bail|required'
         ];
     }
 }

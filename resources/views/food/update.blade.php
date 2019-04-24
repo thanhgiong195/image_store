@@ -21,7 +21,8 @@
           </ul>
         </div><br />
       @endif
-        <form method="POST" action="{{ url('/food/update') }}">
+        <form method="POST" action="{{ route('food.update', $food->id) }}">
+          @csrf
 		        <input type="hidden" id="id" name="id" value="{{ $food->id }}" />
             <div class="form-group">
                 @csrf

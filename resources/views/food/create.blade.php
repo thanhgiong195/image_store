@@ -9,7 +9,7 @@
   </style>
   <div class="card uper">
     <div class="card-header">
-      Add food
+      {{ trans('food.add') }}
     </div>
     <div class="card-body">
       @if ($errors->any())
@@ -24,18 +24,18 @@
         <form method="POST" action="{{ url('/food/create') }}">
             <div class="form-group">
                 @csrf
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" name="food_name" required/>
+                <label for="name">{{ trans('food.name') }}:</label>
+                <input type="text" class="form-control" name="food_name"/>
             </div>
             <div class="form-group">
-                <label for="price">Description:</label>
-                <input type="text" class="form-control" name="food_description" required/>
+                <label for="price">{{ trans('food.description') }}:</label>
+                <input type="text" class="form-control" name="food_description"/>
             </div>
             <div class="form-group">
-                <label for="quantity">Image URL:</label>
-                <input type="text" class="form-control" name="food_image" required/>
+                <label for="quantity">{{ trans('food.imageUrl') }}:</label>
+                <input type="text" class="form-control" name="food_image"/>
             </div>
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" class="btn btn-primary">{{ trans('food.add') }}</button>
         </form>
     </div>
   </div>

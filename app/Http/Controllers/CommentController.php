@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Comment;
 use App\Food;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\CommentRequest;
 
 class CommentController extends Controller
 {
